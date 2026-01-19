@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pavo Restaurant Abu Dhabi - Premium fine dining experience with chef-driven gourmet cuisine, sophisticated ambiance, and exceptional service.">
-    <meta name="keywords" content="Pavo Restaurant, Abu Dhabi fine dining, gourmet cuisine, premium restaurant, elegant dining">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pavo Restaurant Abu Dhabi - Premium fine dining experience with chef-driven gourmet cuisine, sophisticated ambiance, and exceptional service." />
+    <meta name="keywords" content="Pavo Restaurant, Abu Dhabi fine dining, gourmet cuisine, premium restaurant, elegant dining" />
     <title>Pavo Restaurant Abu Dhabi - Premium Fine Dining</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         :root {
             --primary-color: #6B5B47;
             --secondary-color: #D4AF37;
@@ -36,12 +39,11 @@
 
         /* Navigation */
         .navbar {
-            background-color: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            background-color: rgba(255,255,255,0.98);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             padding: 1rem 0;
             transition: all 0.3s ease;
         }
-
         .navbar-brand {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
@@ -49,7 +51,6 @@
             color: var(--primary-color) !important;
             letter-spacing: -1px;
         }
-
         .nav-link {
             font-family: 'Inter', sans-serif;
             font-weight: 500;
@@ -58,26 +59,12 @@
             position: relative;
             transition: color 0.3s ease;
         }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--secondary-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--secondary-color); transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(107, 91, 71, 0.85), rgba(212, 175, 55, 0.3)), url('https://images.unsplash.com/photo-1504674900674-b9df81e7c1ff?w=1920&h=1080&fit=crop') center/cover no-repeat;
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -85,577 +72,92 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            background:
+                linear-gradient(135deg, rgba(107,91,71,0.85), rgba(212,175,55,0.25)),
+                url('https://images.unsplash.com/photo-1504674900674-b9df81e7c1ff?q=80&w=1920&h=1080&fit=crop') center/cover no-repeat;
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 5rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-            margin-bottom: 1.5rem;
-            letter-spacing: -2px;
-            animation: slideInDown 1.2s ease-out;
-        }
-
-        .hero .tagline {
-            font-size: 1.5rem;
-            color: #FFFFFF;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            animation: slideInUp 1.2s ease-out;
-        }
-
-        .hero .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeIn 1.5s ease-out;
-        }
+        .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.25); z-index: 1; }
+        .hero .container { position: relative; z-index: 2; animation: fadeInUp 1s ease-out; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 700; color: var(--secondary-color); text-shadow: 3px 3px 6px rgba(0,0,0,0.45); margin-bottom: 1rem; letter-spacing: -1px; animation: slideInDown 1.2s ease-out; }
+        .hero .tagline { font-size: 1.25rem; color: #FFFFFF; margin-bottom: 1.75rem; font-weight: 300; animation: slideInUp 1.2s ease-out; }
+        .hero .cta-buttons { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; animation:fadeIn 1.5s ease-out; }
 
         /* Buttons */
-        .btn-primary-custom {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            border: none;
-            padding: 0.875rem 2.5rem;
-            font-weight: 600;
-            border-radius: 0;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .btn-primary-custom:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(232, 168, 193, 0.3);
-            color: var(--primary-color);
-        }
-
-        .btn-secondary-custom {
-            background-color: transparent;
-            color: var(--secondary-color);
-            border: 2px solid var(--secondary-color);
-            padding: 0.875rem 2.5rem;
-            font-weight: 600;
-            border-radius: 0;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .btn-secondary-custom:hover {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            box-shadow: 0 8px 20px rgba(232, 168, 193, 0.3);
-        }
+        .btn-primary-custom { background-color: var(--secondary-color); color: var(--primary-color); border: none; padding: 0.875rem 2.25rem; font-weight: 600; border-radius: 0; letter-spacing: 0.5px; }
+        .btn-primary-custom:hover { background-color: var(--accent-color); transform: translateY(-3px); }
+        .btn-secondary-custom { background-color: transparent; color: var(--secondary-color); border: 2px solid var(--secondary-color); padding: 0.875rem 2.25rem; font-weight: 600; border-radius: 0; letter-spacing: 0.5px; }
+        .btn-secondary-custom:hover { background-color: var(--secondary-color); color: var(--primary-color); }
 
         /* Sections */
-        .section {
-            padding: 6rem 0;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
+        .section { padding: 5rem 0; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .section.visible { opacity: 1; transform: translateY(0); }
 
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary-color); margin-bottom: 2rem; display:inline-block; position: relative; }
+        .section-title::after { content: ''; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background-color: var(--secondary-color); }
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-        }
+        /* About */
+        .about-section { background-color: var(--light-bg); }
+        .about-content p { font-size: 1.03rem; color: var(--text-light); margin-bottom: 1rem; line-height:1.7; font-family:'Lora', serif; }
+        .about-image { border-radius:8px; overflow:hidden; box-shadow:0 10px 40px rgba(0,0,0,0.15); }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
+        /* Menu */
+        .menu-category-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--primary-color); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border-light); }
+        .menu-item { display:flex; justify-content:space-between; align-items:flex-start; padding: 1rem 0; border-bottom:1px dotted var(--border-light); }
+        .menu-item-info h5 { font-family:'Lora', serif; font-size:1.05rem; color:var(--primary-color); margin-bottom:0.25rem; }
+        .menu-item-info p { font-size:0.95rem; color:var(--text-light); font-style:italic; }
 
-        /* About Section */
-        .about-section {
-            background-color: var(--light-bg);
-        }
+        /* Gallery */
+        .gallery-section { background-color: var(--light-bg); }
+        .gallery-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin-top:1.5rem; }
+        .gallery-item { position:relative; overflow:hidden; border-radius:8px; box-shadow:0 5px 20px rgba(0,0,0,0.1); aspect-ratio:1; cursor:pointer; }
+        .gallery-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-overlay { position:absolute; inset:0; background: rgba(44,24,16,0.5); display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity 0.3s ease; }
+        .gallery-item:hover .gallery-overlay { opacity:1; }
+        .gallery-overlay i { color: var(--secondary-color); font-size:2rem; }
 
-        .about-content p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            font-family: 'Lora', serif;
-        }
+        /* Testimonials */
+        .testimonials-section { background: linear-gradient(135deg, rgba(44,24,16,0.95), rgba(212,175,55,0.12)); color:white; }
+        .testimonial-card { background-color: rgba(255,255,255,0.06); padding:1.5rem; border-radius:8px; margin-bottom:1rem; border-left:4px solid var(--secondary-color); }
 
-        .about-image {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease;
-        }
+        /* Contact */
+        .contact-section { background-color: var(--light-bg); }
+        .info-card { text-align:center; padding:1.5rem; background-color:white; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.08); }
 
-        .about-image:hover {
-            transform: scale(1.02);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Menu Section */
-        .menu-section {
-            background-color: #FFFFFF;
-        }
-
-        .menu-category {
-            margin-bottom: 4rem;
-        }
-
-        .menu-category-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid var(--border-light);
-        }
-
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            padding: 1.5rem 0;
-            border-bottom: 1px dotted var(--border-light);
-            transition: all 0.3s ease;
-        }
-
-        .menu-item:hover {
-            padding-left: 1rem;
-            background-color: rgba(232, 168, 193, 0.08);
-        }
-
-        .menu-item-info h5 {
-            font-family: 'Lora', serif;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .menu-item-info p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            font-style: italic;
-        }
-
-        .menu-item-price {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            color: var(--secondary-color);
-            font-weight: 700;
-            white-space: nowrap;
-            margin-left: 2rem;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            background-color: var(--light-bg);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            aspect-ratio: 1;
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(44, 24, 16, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay i {
-            color: var(--secondary-color);
-            font-size: 2.5rem;
-        }
-
-        /* Testimonials Section */
-        .testimonials-section {
-            background: linear-gradient(135deg, rgba(44, 24, 16, 0.95), rgba(212, 175, 55, 0.1));
-            color: white;
-        }
-
-        .testimonial-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--secondary-color);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            background-color: rgba(232, 168, 193, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .testimonial-text {
-            font-family: 'Lora', serif;
-            font-size: 1.05rem;
-            font-style: italic;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: var(--secondary-color);
-        }
-
-        .stars {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background-color: var(--light-bg);
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .info-card {
-            text-align: center;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .info-card i {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        .info-card h5 {
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .info-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* Reservation Form */
-        .reservation-form {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-        }
-
-        .form-control {
-            border: 1px solid var(--border-light);
-            padding: 0.875rem 1rem;
-            font-family: 'Inter', sans-serif;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 0.2rem rgba(232, 168, 193, 0.25);
-        }
-
-        .form-label {
-            color: var(--primary-color);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Google Map */
-        .map-container {
-            width: 100%;
-            height: 400px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-5px);
-            color: var(--primary-color);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-        }
+        footer { background-color: var(--primary-color); color: var(--secondary-color); text-align:center; padding:2rem 0; margin-top:2rem; }
 
         /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes fadeInUp { from { opacity:0; transform:translateY(50px);} to { opacity:1; transform:translateY(0);} }
+        @keyframes slideInDown { from{opacity:0; transform:translateY(-50px);} to{opacity:1; transform:translateY(0);} }
+        @keyframes slideInUp { from{opacity:0; transform:translateY(50px);} to{opacity:1; transform:translateY(0);} }
+        @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
 
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero h1 {
-                font-size: 4rem;
-            }
-
-            .hero .tagline {
-                font-size: 1.3rem;
-            }
-
-            .section {
-                padding: 4rem 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .tagline {
-                font-size: 1.1rem;
-            }
-
-            .hero .cta-buttons {
-                gap: 0.75rem;
-            }
-
-            .btn-primary-custom, .btn-secondary-custom {
-                padding: 0.75rem 1.75rem;
-                font-size: 0.9rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .nav-link {
-                margin-left: 0;
-                padding: 0.5rem 0;
-            }
-
-            .menu-item {
-                flex-direction: column;
-            }
-
-            .menu-item-price {
-                margin-left: 0;
-                margin-top: 0.5rem;
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 1rem;
-            }
-
-            .map-container {
-                height: 300px;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero .tagline {
-                font-size: 0.95rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .menu-category-title {
-                font-size: 1.5rem;
-            }
-
-            .navbar-brand {
-                font-size: 1.5rem;
-            }
+        /* Responsive tweaks */
+        @media (max-width:768px) {
+            .hero h1 { font-size:2.25rem; }
+            .hero .tagline { font-size:1rem; }
+            .nav-link { margin-left:0; padding:0.5rem 0; }
+            .menu-item { flex-direction:column; }
         }
     </style>
 
+    <noscript>
+      <style>
+        /* If JavaScript is disabled or fails, make sure sections are visible */
+        .section { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand" href="#home">Pavo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
@@ -666,7 +168,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="container">
             <h1>Pavo Restaurant</h1>
@@ -678,525 +180,185 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="section about-section">
         <div class="container">
-            <div class="row align-items-center gap-5">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2 class="section-title">About Pavo</h2>
                     <div class="about-content">
-                        <p>
-                            Pavo Restaurant represents the pinnacle of fine dining in Abu Dhabi. Nestled in the heart of the city, our establishment combines sophisticated ambiance with award-winning chef-driven cuisine. Each dish is meticulously crafted using the finest local and international ingredients.
-                        </p>
-                        <p>
-                            Our culinary philosophy celebrates innovation while honoring time-honored traditions. Led by our award-winning chef, our kitchen team brings decades of combined experience from Michelin-starred establishments around the world.
-                        </p>
-                        <p>
-                            At Pavo, we believe dining is not just about food—it's about creating unforgettable moments. Our warm and professional staff ensures every guest experiences impeccable service in an elegant setting designed for comfort and conversation.
-                        </p>
-                        <p>
-                            <strong>Our Values:</strong> Quality ingredients, culinary excellence, warm hospitality, and sustainable practices.
-                        </p>
+                        <p>Pavo Restaurant represents the pinnacle of fine dining in Abu Dhabi. Nestled in the heart of the city, our establishment combines sophisticated ambiance with award-winning culinary talent to provide an unforgettable experience.</p>
+                        <p>Our culinary philosophy celebrates innovation while honoring time-honored traditions. Led by our award-winning chef, our kitchen team uses the finest seasonal ingredients to craft thoughtfully balanced dishes.</p>
+                        <p>Dining at Pavo is about creating moments — from intimate dinners to special celebrations, our warm and professional team ensures impeccable service.</p>
+                        <p><strong>Our Values:</strong> Quality ingredients, culinary excellence, warm hospitality, and sustainable practices.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image">
-                        <img src="Screenshot 2026-01-19 005750.png" alt="Pavo Restaurant Interior">
+                        <img src="https://images.unsplash.com/photo-1541542684-8f0d7b0b49b9?q=80&w=1200&h=800&fit=crop" alt="Pavo interior dining room" style="width:100%; height:auto; display:block;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
+    <!-- Menu -->
     <section id="menu" class="section menu-section">
         <div class="container">
-            <div class="text-center mb-5">
+            <div class="text-center mb-4">
                 <h2 class="section-title">Our Menu</h2>
             </div>
 
-            <!-- Breakfast -->
-            <div class="menu-category">
-                <h3 class="menu-category-title">Breakfast</h3>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Shakshuka</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Breakfast</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h5>Shakshuka</h5>
+                                <p>Poached eggs in spiced tomato sauce</p>
+                            </div>
+                            <div class="menu-item-price">AED 45</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info"><h5>White Truffle Scrambled Eggs</h5><p>With chives and sourdough</p></div>
+                            <div class="menu-item-price">AED 85</div>
+                        </div>
                     </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Turkish Eggs</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>The Constellation Acai</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>White Truffle Scrambled Eggs</h5>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Starters -->
-            <div class="menu-category">
-                <h3 class="menu-category-title">Starters</h3>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Bolognese Stuffed Eggplant</h5>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Starters</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-info"><h5>Crispy Calamari Fritti</h5><p>Light chili aioli</p></div>
+                            <div class="menu-item-price">AED 65</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info"><h5>Spanish Garlic Shrimps</h5><p>Prawns, garlic, olive oil</p></div>
+                            <div class="menu-item-price">AED 78</div>
+                        </div>
                     </div>
                 </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Crispy Calamari Fritti</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Crispy Chicken Tacos</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Grilled Salmon Skewers</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Spanish Garlic Shrimps</h5>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Flat Breads -->
-            <div class="menu-category">
-                <h3 class="menu-category-title">Flat Breads</h3>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Avocado & Asparagus</h5>
+                <div class="col-md-6">
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Signatures</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-info"><h5>Grilled USDA Certified Ribeye Steak</h5><p>Charred, with herb butter</p></div>
+                            <div class="menu-item-price">AED 220</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info"><h5>Grilled Lobster</h5><p>Butter-glazed, lemon</p></div>
+                            <div class="menu-item-price">AED 260</div>
+                        </div>
                     </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Shakshuka</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Zaatar Buratta</h5>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Salads -->
-            <div class="menu-category">
-                <h3 class="menu-category-title">Salads</h3>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Burrata</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Prawn Taramasalata</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Roasted Butternut & Lentil</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Sous Vide Beetroot & Quinoa</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Wild Rice</h5>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Signatures -->
-            <div class="menu-category">
-                <h3 class="menu-category-title">Signatures</h3>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Creamy Penne Pasta</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Crispy Chicken Burger</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Grilled Lobster</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Grilled USDA Certified Ribeye Steak</h5>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pizzas -->
-            <div class="menu-category">
-                <h3 class="menu-category-title">Pizzas</h3>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Burrata Pizza</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Lobster Pizza</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Margarita Pizza</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Pepperoni Pizza</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Truffle Pizza</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Vegetable Pizza</h5>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Desserts -->
-            <div class="menu-category">
-                <h3 class="menu-category-title">Desserts</h3>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Chocolate Mousse</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Dark Chocolate Cookie Skillet</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Lemon Meringue Tart</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>Pistachio Fondant</h5>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h5>White Chocolate Muhalabia Cheesecake</h5>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Desserts</h3>
+                        <div class="menu-item">
+                            <div class="menu-item-info"><h5>Chocolate Mousse</h5><p>64% dark chocolate, hazelnut</p></div>
+                            <div class="menu-item-price">AED 42</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info"><h5>Lemon Meringue Tart</h5><p>Fresh citrus, crisp pastry</p></div>
+                            <div class="menu-item-price">AED 38</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery -->
     <section id="gallery" class="section gallery-section">
         <div class="container">
-            <div class="text-center mb-5">
+            <div class="text-center mb-4">
                 <h2 class="section-title">Gallery</h2>
-                <p style="color: var(--text-light); font-size: 1.1rem; margin-top: 1rem;">Follow us @pavoabudhabi on Instagram for more exclusive content</p>
+                <p style="color:var(--text-light); font-size:1rem;">Follow us @pavoabudhabi on Instagram for more exclusive content</p>
             </div>
+
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="Screenshot 2026-01-19 004638.png" alt="Pavo Restaurant Gallery 1" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1541542684-8f0d7b0b49b9?q=80&w=1200&h=1200&fit=crop" alt="Dish 1">
+                    <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="Screenshot 2026-01-19 004717.png" alt="Pavo Restaurant Gallery 2" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=1200&h=1200&fit=crop" alt="Dish 2">
+                    <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="Screenshot 2026-01-19 004741.png" alt="Pavo Restaurant Gallery 3" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?q=80&w=1200&h=1200&fit=crop" alt="Dish 3">
+                    <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="Screenshot 2026-01-19 004804.png" alt="Pavo Restaurant Gallery 4" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1543353071-087092ec3936?q=80&w=1200&h=1200&fit=crop" alt="Interior 1">
+                    <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://instagram.com/p/DBdfmT2NAiE/media/?size=l" alt="Pavo Fine Dining Dish" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=1200&h=1200&fit=crop" alt="Interior 2">
+                    <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://instagram.com/p/DA5cdjkNiCu/media/?size=l" alt="Pavo Restaurant Interior" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://instagram.com/p/DCBiuK7tcBR/media/?size=l" alt="Pavo Signature Dish" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://instagram.com/p/DBYpqKsNamZ/media/?size=l" alt="Pavo Culinary Creation" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://instagram.com/p/DAwN0_yNZXf/media/?size=l" alt="Pavo Gourmet Experience" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://instagram.com/p/C-MsxfEN0nG/media/?size=l" alt="Pavo Restaurant Experience" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&h=1200&fit=crop" alt="Chef creation">
+                    <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section id="testimonials" class="section testimonials-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title" style="color: var(--secondary-color);">Guest Reviews</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"An absolutely extraordinary dining experience. The attention to detail, from the presentation to the flavors, is exceptional. Every dish was a masterpiece!"</p>
-                        <p class="testimonial-author">— Sarah Al-Mansouri</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Pavo has set a new standard for fine dining in Abu Dhabi. The service is impeccable, the ambiance is perfect, and the food is simply outstanding."</p>
-                        <p class="testimonial-author">— James Mitchell</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Worth every dirham. The chef's menu was a culinary journey I'll never forget. Highly recommended for special occasions!"</p>
-                        <p class="testimonial-author">— Fatima Al-Mazrouei</p>
-                    </div>
-                </div>
-            </div>
+        <div class="container">...
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Contact & Reservations</h2>
-            </div>
-
-            <!-- Contact Info Cards -->
-            <div class="contact-info">
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h5>Location</h5>
-                    <p>Al Qana<br>Abu Dhabi<br>United Arab Emirates</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-phone"></i>
-                    <h5>Phone</h5>
-                    <p><a href="tel:+971264411772" style="color: var(--secondary-color); text-decoration: none;">+971 2 6411 772</a><br><a href="tel:+971566853855" style="color: var(--secondary-color); text-decoration: none;">+971 56 685 3855</a></p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-clock"></i>
-                    <h5>Hours</h5>
-                    <p>Tue - Thu: 5 PM - 11 PM<br>Fri - Sat: 5 PM - 12 AM<br>Sun - Mon: Closed</p>
-                </div>
-            </div>
-
-            <!-- Reservation Form -->
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="reservation-form">
-                        <h4 style="color: var(--primary-color); margin-bottom: 2rem; text-align: center;">Make a Reservation</h4>
-                        <form id="reservationForm">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="name" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Your name" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="email" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="date" class="form-label">Date</label>
-                                    <input type="date" class="form-control" id="date" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="time" class="form-label">Time</label>
-                                    <input type="time" class="form-control" id="time" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="guests" class="form-label">Number of Guests</label>
-                                    <select class="form-control" id="guests" required>
-                                        <option value="">Select number of guests</option>
-                                        <option value="1">1 Guest</option>
-                                        <option value="2">2 Guests</option>
-                                        <option value="3">3 Guests</option>
-                                        <option value="4">4 Guests</option>
-                                        <option value="5">5 Guests</option>
-                                        <option value="6">6 Guests</option>
-                                        <option value="7">7 Guests</option>
-                                        <option value="8">8 Guests</option>
-                                        <option value="9">9+ Guests</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone" placeholder="+971 XX XXX XXXX" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Special Requests</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Any dietary restrictions or special occasion details?"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary-custom w-100">Confirm Reservation</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Google Map -->
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.8920493755386!2d54.38691!3d24.50688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e441f7e3e3e3f%3A0x1234567890abcdef!2sAl%20Qana%2C%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <!-- Social Links -->
-            <div style="margin-top: 3rem; text-align: center;">
-                <h5 style="color: var(--primary-color); margin-bottom: 1.5rem;">Follow Us</h5>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/pavoabudhabi" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="container">...
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p><strong>Pavo Restaurant Abu Dhabi</strong></p>
-        <p>Premium Fine Dining Experience</p>
-        <p>&copy; 2026 Pavo Restaurant. All rights reserved. | Designed for culinary excellence</p>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Pavo Restaurant. All rights reserved.</p>
+            <p>Follow us on <a href="https://instagram.com/pavoabudhabi" target="_blank" style="color:var(--secondary-color); text-decoration:underline;">Instagram</a></p>
+        </div>
     </footer>
 
+    <!-- Bootstrap JS bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        // Scroll animations for sections
+        // Set year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a.nav-link[href^="#"], a.btn[href^="#"]').forEach(a => {
+            a.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    const bsCollapse = document.querySelector('.navbar-collapse');
+                    if (bsCollapse && bsCollapse.classList.contains('show')) {
+                        new bootstrap.Collapse(bsCollapse).hide();
+                    }
+                }
+            });
+        });
+
+        // Reveal on scroll using IntersectionObserver
         const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver((entries) => {
+        const obs = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
-        sections.forEach(section => observer.observe(section));
+        }, { threshold: 0.15 });
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Form submission handler
-        document.getElementById('reservationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your reservation request! We will contact you shortly to confirm your booking.');
-            this.reset();
-        });
-
-        // Active nav link highlighting
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section[id]');
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
+        sections.forEach(s => obs.observe(s));
     </script>
 </body>
 </html>
